@@ -4,12 +4,18 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Engine, SAMPLE_RATE, toWav, type Speech } from "@/lib/engine";
 
 const EXAMPLES = [
-  { label: "سلام", text: "السلام علیکم، آپ کیسے ہیں؟" },
-  { label: "موسم", text: "آج موسم بہت اچھا ہے، چلو باہر چلتے ہیں۔" },
-  { label: "راستہ", text: "کیا آپ مجھے ریلوے اسٹیشن کا راستہ بتا سکتے ہیں؟" },
-  { label: "پاکستان", text: "پاکستان کا دارالحکومت اسلام آباد ہے۔" },
-  { label: "اعداد", text: "میرے پاس 25 کتابیں اور 3 قلم ہیں۔" },
-  { label: "چائے", text: "مجھے چائے بہت پسند ہے لیکن کافی نہیں۔" },
+  {
+    label: "زندگی",
+    text: "زندگی ایک ایسا سفر ہے جس میں ہر قدم پر نئے تجربات اور سبق ملتے ہیں۔ کبھی حالات ہموار ہوتے ہیں اور کبھی مشکلات کا سامنا کرنا پڑتا ہے، لیکن حوصلہ اور محنت انسان کو آگے بڑھنے کی طاقت دیتے ہیں۔ اگر ہم اپنے وقت کی قدر کریں، دوسروں کے ساتھ بھلائی کریں اور سیکھنے کا عمل جاری رکھیں تو ہر چیلنج کو ایک موقع میں بدل سکتے ہیں۔ علم، صبر اور مثبت سوچ نہ صرف ہماری اپنی زندگی کو سنوارتے ہیں بلکہ معاشرے میں بھی روشنی پھیلاتے ہیں۔",
+  },
+  {
+    label: "ٹیکنالوجی",
+    text: "آج کے دور میں ٹیکنالوجی نے ہماری روزمرہ زندگی کو بہت آسان بنا دیا ہے۔ ہم چند لمحوں میں دنیا کے کسی بھی کونے سے معلومات حاصل کر سکتے ہیں اور اپنے پیاروں سے رابطہ کر سکتے ہیں۔ لیکن اس کے ساتھ ساتھ یہ بھی ضروری ہے کہ ہم ٹیکنالوجی کو سمجھداری سے استعمال کریں اور اپنا قیمتی وقت صرف مفید کاموں میں لگائیں۔ جو لوگ نئی مہارتیں سیکھنے کے لیے تیار رہتے ہیں، وہی آنے والے کل کی دنیا میں کامیاب ہوتے ہیں۔",
+  },
+  {
+    label: "پاکستان",
+    text: "پاکستان ایک خوبصورت ملک ہے جہاں بلند پہاڑ، سرسبز وادیاں، وسیع صحرا اور گہرے سمندر سب ایک ساتھ ملتے ہیں۔ یہاں کے لوگ اپنی مہمان نوازی، محبت اور سادگی کے لیے مشہور ہیں۔ اگر ہم سب مل کر ایمانداری اور محنت سے اپنا کام کریں اور تعلیم کو اپنی ترجیح بنائیں تو یہ ملک ترقی کی نئی منزلیں طے کر سکتا ہے۔ ہمارے نوجوان اس ملک کا سب سے بڑا سرمایہ ہیں اور ان کی صلاحیتیں ہمارے روشن مستقبل کی ضمانت ہیں۔",
+  },
 ];
 
 type Status = "loading" | "ready" | "speaking" | "failed";
@@ -71,11 +77,11 @@ export default function Tts() {
         id="urdu-text"
         dir="rtl"
         lang="ur"
-        rows={4}
+        rows={7}
         value={text}
         onChange={(event) => setText(event.target.value)}
         placeholder="یہاں اردو لکھیں…"
-        className="font-urdu w-full resize-y rounded-xl border border-line bg-field p-4 text-2xl leading-[2.1] outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+        className="font-urdu w-full resize-y rounded-xl border border-line bg-field p-4 text-xl leading-[2.2] sm:text-2xl outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
       />
 
       <div className="mt-3 flex flex-wrap gap-2" aria-label="Example sentences">
