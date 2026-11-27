@@ -10,6 +10,14 @@ export default function Home() {
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <header>
+        <a
+          href="https://unityalgo.com"
+          className="mb-8 inline-flex items-center gap-3 rounded-full border border-line bg-card py-1.5 pr-4 pl-1.5 transition hover:border-accent"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/unityalgo-logo.png" alt="" width={32} height={32} className="rounded-full" />
+          <span className="text-sm font-semibold tracking-wide">UnityAlgo</span>
+        </a>
         <p className="text-sm font-medium tracking-wide text-accent uppercase">Open experiment</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">Nano Urdu TTS</h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
@@ -53,6 +61,9 @@ export default function Home() {
       </section>
 
       <footer className="mt-14 border-t border-line pt-6 text-sm text-muted">
+        <p className="mb-6 font-medium text-foreground">
+          Built by <span className="text-accent">UnityAlgo</span>
+        </p>
         <h2 className="font-semibold text-foreground">Licences and credits — non-commercial use only</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li>

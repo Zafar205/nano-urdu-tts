@@ -6,7 +6,7 @@ const sans = Geist({ variable: "--font-sans", subsets: ["latin"] });
 const urdu = Noto_Nastaliq_Urdu({ variable: "--font-urdu", subsets: ["arabic"] });
 
 export const metadata: Metadata = {
-  title: "Nano Urdu TTS",
+  title: "Nano Urdu TTS · UnityAlgo",
   description:
     "A tiny Urdu text-to-speech model (443,402 parameters, about 500 KB) that runs entirely in your browser.",
 };
